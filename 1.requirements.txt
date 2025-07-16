@@ -1,0 +1,13 @@
+Functional Requirements:
+The system must allow users to start a new chess game.
+The system must allow two players to take turns making moves.
+The system must validate each move according to official chess rules.
+The system must detect check, checkmate, stalemate, and draw.
+The system must visually display the chessboard and all pieces.
+The system must support play against another human or against a computer.
+
+Non-Functional Requirements
+The user interface must be intuitive and user-friendly.
+The system must ensure high reliability with no crashes or illegal states.
+The system must be portable and runnable on multiple platforms
+The codebase must be modular to support testing and maintenance.

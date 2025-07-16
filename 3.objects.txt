@@ -1,0 +1,18 @@
+Chess Game - Manages the game lifecycle, turns, and state.
+Responsibilities: Start game, switch turns, check game status.
+
+Chessboard - Represents the 8×8 grid with pieces on cells.
+Responsibilities: Initialize board, get/set piece on a cell.
+
+Square	Cell - A square that may or may not contain a piece.
+Responsibilities: Knows what piece (if any) is on it.
+
+Chess Piece - Abstract class for all chess pieces.
+Specific Piece Types -	King, Queen, Pawn, ...	Concrete subclasses of Piece.
+Responsibilities: Checks if move is valid for the piece
+
+Move -	Represents one move: from → to.
+Responsibilities: Knows piece that perform move, start cell and end cell is on it.
+
+Player	Base class for a player.
+Responsibilities: Makes move

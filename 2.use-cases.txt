@@ -1,0 +1,52 @@
+Use Case 1: Start New Game
+Actor: Player
+Description: A player starts a new chess game session.
+Preconditions: The system is running.
+Postconditions: The board is initialized, and players are assigned colors.
+Main Flow:
+Player selects “New Game”.
+The system initializes the board and places pieces.
+The system assigns white and black to players.
+The game starts with white’s turn.
+
+Use Case 2: Make Move
+Actor: Player
+Description: A player selects and moves a piece.
+Preconditions: It is the player’s turn.
+Postconditions: The piece is moved if the move is valid.
+Main Flow:
+Player selects a piece.
+Player selects a destination square.
+System validates the move.
+If valid, the move is executed and added to history.
+System switches turns.
+
+Use Case 3: Validate Move
+Actor: System
+Description: Validates the legality of a proposed move.
+Preconditions: A player attempts to move a piece.
+Postconditions: System determines if the move is allowed.
+Main Flow:
+System checks the rules for the selected piece.
+Ensures move does not leave own king in check.
+Returns result to caller.
+
+Use Case 4: Detect Check/Checkmate/Stalemate
+Actor: System
+Description: The system checks the board state after each move.
+Preconditions: A move has just been made.
+Postconditions: System identifies special game states if present.
+Main Flow:
+Check if the opposing king is under attack.
+If so, determine if it’s checkmate.
+Check for stalemate or draw conditions.
+
+Use Case 8: End Game
+Actor: System
+Description: The system ends the game due to checkmate, stalemate, resignation, or draw.
+Preconditions: One of the end conditions is met.
+Postconditions: Game result is displayed.
+Main Flow:
+System evaluates board state after each move.
+If a win, draw, or resignation is detected, the game ends.
+System shows the result and optionally allows restarting.
